@@ -31,13 +31,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        K = findViewById(R.id.k);
-        L = findViewById(R.id.l);
-
-        pieChart = findViewById(R.id.piechart);
 
 
-        setData();
+
 
         graph = (GraphView) findViewById(R.id.graph);
 
@@ -71,26 +67,6 @@ public class MainActivity extends AppCompatActivity
 
 
 
-    private void setData()
-    {
 
-        K.setText(Integer.toString(74));
-        L.setText(Integer.toString(2));
-
-
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Python",
-                        Integer.parseInt(K.getText().toString()),
-                        Color.parseColor("#06668C")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "C++",
-                        Integer.parseInt(L.getText().toString()),
-                        Color.parseColor("#C23028")));
-
-
-        pieChart.startAnimation();
-    }
 }
 
